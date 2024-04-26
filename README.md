@@ -1,6 +1,6 @@
 # fhir-bulk-data-import
 
-A short writeup of how to get loads of data into a HAPI FHIR server setup. Guide assumes familiarity with FHIR, HAPI FHIR, Synthea & Bulk Import
+A short writeup of how to get loads of data into a HAPI FHIR server setup. Guide assumes familiarity with [FHIR](hl7.org/fhir), [HAPI FHIR](https://github.com/hapifhir/hapi-fhir-jpaserver-starter), [Synthea](https://github.com/synthetichealth/synthea) & Bulk Import
 
 
 # Steps
