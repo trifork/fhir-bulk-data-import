@@ -26,22 +26,24 @@ def create_fhir_parameters(directory_path):
     fhir_parameters["parameter"].append({"name": "inputFormat", "valueString": "application/fhir+ndjson"})
   
     for filename in os.listdir(directory_path):
-        entry = { "name": "input", "part": []}
-        # Create a FHIR Parameter entry for each file
-        type = filename.split(".")
-        part1 = {
-            "name": "type", "valueCode": type[0]}
+         if filename.endswith('ndjson') :
+         
+            entry = { "name": "input", "part": []}
+            # Create a FHIR Parameter entry for each file
+            type = filename.split(".")
+            part1 = {
+                "name": "type", "valueCode": type[0]}
 
-        part2 = {"name": "url", "valueUri": 
-                host + filename
-            
-        }
+            part2 = {"name": "url", "valueUri": 
+                    host + filename
+                
+            }
 
-        entry["part"].append(part1)
-        entry["part"].append(part2)
+            entry["part"].append(part1)
+            entry["part"].append(part2)
 
-        # Add the file entry to the Parameters object
-        fhir_parameters["parameter"].append(entry)
+            # Add the file entry to the Parameters object
+            fhir_parameters["parameter"].append(entry)
 
     return fhir_parameters
 
