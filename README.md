@@ -5,7 +5,7 @@ A short writeup of how to get loads of data into a HAPI FHIR server setup. Guide
 
 # Steps
 * Generate data using synthea
-* Generate the Parameters file using the parameters script below
+* Generate the Parameters file using the parameters script below (the file format is bespoke to HAPI - see https://smilecdr.com/docs/bulk/fhir_bulk_import.html#fhir-bulk-import).
 * Start the Bulk Data Hosting Server using the Python script below
 * Post the Parameters file to HAPI FHIR with the Bulk Import feature enabled
 * Profit
