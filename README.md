@@ -8,7 +8,7 @@ A short writeup of how to get loads of data into a HAPI FHIR server setup. Guide
 * Generate the Parameters file using the parameters script below (the file format is bespoke to HAPI - see https://smilecdr.com/docs/bulk/fhir_bulk_import.html#fhir-bulk-import) by executing the script in the fhir output folder of synthea.
 * Start the Bulk Data Hosting Server using the Python script below by executing the script in the fhir output folder of synthea.
 * Start the HAPI FHIR Jpa starter with `bulk_import_enabled: true` and `auto_create_placeholder_reference_targets: true`.
-* `POST` the Parameters file contents to HAPI FHIR at the `$import` endpoint and with the `HTTP Header` `Prefer: respond-async`.
+* `POST` the Parameters file contents to HAPI FHIR at the `$import` endpoint and with the `HTTP Header` `Prefer: respond-async` - e.g. using curl: `curl -X POST 'http://localhost:8080/fhir/$import' --data "@parameters.json" -H "Prefer: respond-async"  -H "Content-Type: application/json"`
 * Profit $$$
 
 # Script for generating the Parameters file:
