@@ -2,8 +2,10 @@
 
 A short writeup of how to get loads of data into a HAPI FHIR server setup. Guide assumes familiarity with [FHIR](hl7.org/fhir), [HAPI FHIR](https://github.com/hapifhir/hapi-fhir-jpaserver-starter), [Synthea](https://github.com/synthetichealth/synthea) & [Bulk Import](https://github.com/smart-on-fhir/bulk-import/blob/master/import-manifest.md)
 
+# The default way
+* Use the HAPI FHIR CLI tool with bulk-import
 
-# Steps
+# The alternative way
 * Generate data using synthea having bulk export enabled.
 * Generate the Parameters file using the parameters script below (the file format is bespoke to HAPI - see https://smilecdr.com/docs/bulk/fhir_bulk_import.html#fhir-bulk-import) by executing the script in the fhir output folder of synthea.
 * Start the Bulk Data Hosting Server using the Python script below by executing the script in the fhir output folder of synthea.
