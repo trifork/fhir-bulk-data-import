@@ -14,7 +14,7 @@ A short writeup of how to get loads of data into a HAPI FHIR server setup. Guide
 * Profit $$$
 
 # Script for generating the Parameters file:
-
+(This script is no longer needed as of https://github.com/synthetichealth/synthea/pull/1452)
 ```
 import os
 import json
