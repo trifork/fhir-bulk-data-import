@@ -1,6 +1,6 @@
 # fhir-bulk-data-import
 
-A short writeup of how to get loads of data into a HAPI FHIR server setup. Guide assumes familiarity with [FHIR](hl7.org/fhir), [HAPI FHIR](https://github.com/hapifhir/hapi-fhir-jpaserver-starter), [Synthea](https://github.com/synthetichealth/synthea) & [Bulk Import](https://github.com/smart-on-fhir/bulk-import/blob/master/import-manifest.md)
+A short writeup of how to get loads of data into a HAPI FHIR server setup. Guide assumes familiarity with [FHIR](hl7.org/fhir), [HAPI FHIR](https://github.com/hapifhir/hapi-fhir-jpaserver-starter), [Synthea](https://github.com/synthetichealth/synthea) & [Bulk Import](https://github.com/smart-on-fhir/bulk-import/blob/master/import-manifest.md). Be mindful that importing populations above ~100 patients will clog up the server unless you are using Smile or if you have externalized the internal async job queues.
 
 # The default way
 * Use the HAPI FHIR CLI tool with bulk-import
